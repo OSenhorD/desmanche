@@ -1,59 +1,200 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistema de Gestão de Autopeças com Integração a Marketplaces
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistema completo para **gestão de estoque, vendas e anúncios de autopeças**, com integração direta com marketplaces como **Mercado Livre, OLX, Magalu e Shopee**.
 
-## About Laravel
+A plataforma permite centralizar o cadastro de produtos, sincronizar estoque e preços automaticamente e gerenciar pedidos provenientes de diferentes canais em um único painel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Visão Geral
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Este sistema foi desenvolvido para **lojas de autopeças, desmanches e distribuidores** que vendem em múltiplos marketplaces e precisam:
 
-## Learning Laravel
+* Centralizar o cadastro de produtos
+* Sincronizar estoque entre canais
+* Publicar e atualizar anúncios automaticamente
+* Gerenciar pedidos em um único sistema
+* Evitar vendas duplicadas por falta de sincronização de estoque
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Funcionalidades
 
-## Laravel Sponsors
+* Cadastro e gestão de produtos e autopeças
+* Controle de estoque em tempo real
+* Sincronização automática de estoque entre marketplaces
+* Integração com APIs de marketplaces
+* Importação automática de pedidos
+* Atualização de preços e anúncios
+* Dashboard de vendas e pedidos
+* Gestão de imagens e atributos de produtos
+* Registro de logs de integração
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Integrações com Marketplaces
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+O sistema possui integração com:
 
-## Contributing
+* Mercado Livre
+* OLX
+* Magalu Marketplace
+* Shopee
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+As integrações permitem:
 
-## Code of Conduct
+* Publicar produtos
+* Atualizar preço e estoque
+* Receber pedidos
+* Sincronizar status de vendas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## Arquitetura
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+O sistema segue uma arquitetura moderna baseada em **API + aplicação web**, utilizando boas práticas de separação de responsabilidades e organização por casos de uso.
 
-## License
+Principais características:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Backend baseado em API
+* Integrações assíncronas com marketplaces
+* Processamento de filas para sincronização
+* Estrutura modular para novas integrações
+
+---
+
+## Tecnologias Utilizadas
+
+### Backend
+
+* PHP 8+
+* Composer
+* Framework Laravel
+* MySQL
+* REST API
+* Integração com APIs externas
+
+### Frontend
+
+* Node.js
+* NPM
+* Vite
+* JavaScript / TypeScript
+* HTML / CSS
+* TailwindCSS
+
+### Integrações
+
+* APIs de marketplaces
+* Webhooks para atualização de pedidos
+* Sincronização via jobs e workers
+
+---
+
+## Requisitos do Ambiente
+
+### Backend
+
+* PHP 8.2 ou superior
+* Composer
+* Extensões PHP:
+
+  * OpenSSL
+  * PDO
+  * Mbstring
+  * Tokenizer
+  * XML
+  * Ctype
+  * JSON
+  * BCMath
+
+### Frontend
+
+* Node.js 18 ou superior
+* NPM
+
+### Banco de Dados
+
+* MySQL 8+
+
+---
+
+## Instalação
+
+### 1. Clonar o repositório
+
+```bash
+$ git clone https://github.com/OSenhorD/desmanche.git
+$ cd desmanche
+```
+
+---
+
+### 2. Instalar dependências PHP
+
+```bash
+$ composer run-script setup
+```
+
+---
+
+### 8. Iniciar servidor
+
+```bash
+php artisan serve
+```
+
+A aplicação estará disponível em:
+
+```
+http://localhost:8000
+```
+
+---
+
+## Sincronização com Marketplaces
+
+As integrações funcionam através de:
+
+* APIs oficiais dos marketplaces
+* Webhooks para atualização de pedidos
+* Jobs assíncronos para sincronização de estoque
+
+Recomenda-se executar workers para processamento de filas:
+
+```bash
+php artisan queue:work
+```
+
+## Segurança
+
+O sistema inclui:
+
+* Autenticação de usuários
+* Controle de acesso
+* Validação de dados
+* Logs de integração
+* Proteção contra requisições inválidas
+
+---
+
+## Boas Práticas
+
+* Versionamento utilizando Git
+* Padrão de commits semânticos
+* Testes automatizados
+* Uso de filas para integrações externas
+* Separação entre domínio e infraestrutura
+
+---
+
+## Licença
+
+Este projeto é privado e destinado ao uso interno da empresa ou clientes licenciados.
+
+---
+
+## Autor
+
+Desenvolvido por
+**David Marques** e **Cristian Marques**
