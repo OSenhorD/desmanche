@@ -17,7 +17,7 @@ final class Categories extends Model
      *
      * @var list<string>
      */
-    protected $fillable = [];
+    protected $fillable = ['name'];
 
     /**
      * The attributes that should be hidden for serialization.
