@@ -1,24 +1,86 @@
 {
+    "prepare-commit-msg": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "CaptainHook.Branch.NameMustMatchRegex",
+                "options": {
+                    "regex": "#^(main|develop|feature/[a-z0-9-]+|bugfix/[a-z0-9-]+|hotfix/[a-z0-9-]+)$#"
+                }
+            }
+        ]
+    },
     "commit-msg": {
         "enabled": true,
         "actions": [
             {
-                "action": "\\CaptainHook\\App\\Hook\\Message\\Action\\Beams",
+                "action": "CaptainHook.Message.MustMatchRegex",
                 "options": {
-                    "subjectLength": 50,
-                    "bodyLineLength": 72
+                    "regex": "/^(feat|fix|docs|style|refactor|test|chore)(\\(.+\\))?: .+$/"
                 }
             }
         ]
     },
     "pre-commit": {
         "enabled": true,
+        "conditions": [
+            {
+                "exec": "CaptainHook.Status.NotOnBranch",
+                "args": [
+                    "main"
+                ]
+            }
+        ],
         "actions": [
+            {
+                "action": "CaptainHook.Branch.NameMustMatchRegex",
+                "options": {
+                    "regex": "#^(main|develop|feature/[a-z]+-[0-9]+|hotfix/[a-z]+-[0-9]+|bugfix/[a-z]+-[0-9]+)$#"
+                }
+            },
             {
                 "action": "\\CaptainHook\\App\\Hook\\PHP\\Action\\Linting"
             },
             {
+                "action": "composer pint"
+            }
+        ]
+    },
+    "pre-push": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "CaptainHook.File.MaxSize",
+                "config": {
+                    "allow-failure": true,
+                    "label": "Max size check"
+                },
+                "options": {
+                    "maxSize": "1M"
+                }
+            },
+            {
                 "action": "composer test"
+            }
+        ]
+    },
+    "post-change": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "composer install",
+                "options": {},
+                "conditions": [
+                    {
+                        "exec": "CaptainHook.FileChanged.Any",
+                        "args": [
+                            [
+                                "composer.json",
+                                "composer.lock"
+                            ]
+                        ]
+                    }
+                ]
             }
         ]
     }

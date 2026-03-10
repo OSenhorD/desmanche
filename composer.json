@@ -53,9 +53,15 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
+        "pint": [
+            "./vendor/bin/pint"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
+        ],
+        "post-install-cmd": [
+          "./vendor/bin/captainhook install"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
