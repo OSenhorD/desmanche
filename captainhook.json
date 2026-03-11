@@ -42,7 +42,7 @@
                 "action": "\\CaptainHook\\App\\Hook\\PHP\\Action\\Linting"
             },
             {
-                "action": "composer pint"
+                "action": "composer run-script pint"
             }
         ]
     },
@@ -60,7 +60,10 @@
                 }
             },
             {
-                "action": "composer test"
+                "action": "composer run-script analyse"
+            },
+            {
+                "action": "composer run-script test"
             }
         ]
     },
