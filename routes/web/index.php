@@ -7,7 +7,6 @@ use App\Livewire\Users\Index;
 use Illuminate\Support\Facades\Route;
 
 // TODO: Middleware para autenticado
-// Route::middleware('auth:sanctum')
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,9 +19,7 @@ Route::name('web.')
 
 Route::middleware(['auth'])->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
-
     Route::get('/users', Index::class)->name('users.index');
-
     Route::get('/user/profile', Profile::class)->name('user.profile');
 });
 

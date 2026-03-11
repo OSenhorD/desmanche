@@ -6,11 +6,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class Categories extends Model
+final class Product extends Model
 {
-    /** @use HasFactory<\Database\Factories\CategoriesFactory> */
+    /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory;
 
     /**
@@ -18,7 +18,13 @@ final class Categories extends Model
      *
      * @var list<string>
      */
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'categories_id',
+        'name',
+        'description',
+        'price',
+        'stock',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -27,9 +33,9 @@ final class Categories extends Model
      */
     protected $hidden = [];
 
-    public function products(): HasMany
+    public function category(): BelongsTo
     {
-        return $this->hasMany(Product::class, 'categories_id');
+        return $this->belongsTo(Categories::class, 'categories_id');
     }
 
     /**

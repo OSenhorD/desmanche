@@ -4,30 +4,30 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCategoriesRequest;
-use App\Http\Requests\UpdateCategoriesRequest;
-use App\Models\Categories;
+use App\Http\Requests\Product\StoreProductRequest;
+use App\Http\Requests\Product\UpdateProductRequest;
+use App\Models\Product;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
-final class CategoriesController extends Controller
+final class ProductController extends Controller
 {
     /**
      * Show the form for creating a new resource.
      */
     public function create(): View
     {
-        return view('admin.categories.create');
+        return view('admin.product.create');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categories $category): View
+    public function edit(Product $product): View
     {
-        return view('admin.categories.edit', compact('category'));
+        return view('admin.product.edit', compact('product'));
     }
 
     /**
@@ -35,88 +35,88 @@ final class CategoriesController extends Controller
      */
     public function index(Request $request): JsonResponse|View
     {
-        $categories = Categories::latest()->paginate(10);
+        $products = Product::latest()->paginate(10);
 
         if ($request->wantsJson()) {
             return response()->json([
                 'success' => true,
-                'data' => $categories,
+                'data' => $products,
             ]);
         }
 
-        return view('admin.categories.index', compact('categories'));
+        return view('admin.product.index', compact('products'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCategoriesRequest $request): RedirectResponse|JsonResponse
+    public function store(StoreProductRequest $request): RedirectResponse|JsonResponse
     {
         $data = $request->validated();
 
-        $category = Categories::create($data);
+        $product = Product::create($data);
 
         if ($request->wantsJson()) {
             return response()->json([
                 'success' => true,
-                'data' => $category,
+                'data' => $product,
             ], 201);
         }
 
         return redirect()
-            ->route('web.admin.categories.index')
-            ->with('success', 'Categoria criada com sucesso!');
+            ->route('web.admin.product.index')
+            ->with('success', 'Produto criado com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Request $request, Categories $category): RedirectResponse|JsonResponse
+    public function show(Request $request, Product $product): RedirectResponse|JsonResponse
     {
         if ($request->wantsJson()) {
             return response()->json([
                 'success' => true,
-                'data' => $category,
+                'data' => $product,
             ]);
         }
 
-        return redirect()->route('web.admin.categories.index');
+        return redirect()->route('web.admin.product.index');
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoriesRequest $request, Categories $category): RedirectResponse|JsonResponse
+    public function update(UpdateProductRequest $request, Product $product): RedirectResponse|JsonResponse
     {
         $data = $request->validated();
 
-        $category->update($data);
+        $product->update($data);
 
         if ($request->wantsJson()) {
             return response()->json([
                 'success' => true,
-                'data' => $category,
+                'data' => $product,
             ], 201);
         }
 
         return redirect()
-            ->route('web.admin.categories.index')
-            ->with('success', 'Categoria editada com sucesso!');
+            ->route('web.admin.product.index')
+            ->with('success', 'Produto editado com sucesso!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Request $request, Categories $category): RedirectResponse|JsonResponse
+    public function destroy(Request $request, Product $product): RedirectResponse|JsonResponse
     {
-        $category->delete();
+        $product->delete();
 
         if ($request->wantsJson()) {
             return response()->json(['success' => true], 204);
         }
 
         return redirect()
-            ->route('web.admin.categories.index')
-            ->with('success', 'Categoria deletada!');
+            ->route('web.admin.product.index')
+            ->with('success', 'Produto deletado!');
     }
 }
