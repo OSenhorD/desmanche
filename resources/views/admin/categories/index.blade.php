@@ -15,7 +15,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<div class="min-h-screen bg-[#0b0e14] p-8 text-gray-300 font-sans">
+<body class="min-h-screen bg-[#0b0e14] p-8 text-gray-300 font-sans">
     <div class="max-w-6xl mx-auto space-y-4">
         <div class="flex justify-between items-center">
             <h1 class="text-2xl font-bold text-white tracking-tight">
@@ -81,7 +81,7 @@
                             <td class="px-6 py-4">
                                 <div class="flex justify-end gap-4">
                                     <a href="{{ route('web.admin.categories.edit', $category) }}">
-                                      <i class="fa-solid fa-pen text-blue-500"></i>
+                                        <i class="fa-solid fa-pen text-blue-500"></i>
                                     </a>
 
                                     <form method="POST" action="{{ route('api.admin.categories.destroy', $category) }}">
@@ -100,8 +100,6 @@
             </table>
         </div>
     </div>
-</div>
-
 </body>
 
 </html>
