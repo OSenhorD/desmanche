@@ -2,11 +2,8 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "davidmarques/desmanche",
     "type": "project",
-    "description": "Sistema completo para gestão de estoque, vendas e anúncios de autopeças, com integração direta com marketplaces como Mercado Livre, OLX, Magalu e Shopee.",
-    "keywords": [
-        "laravel",
-        "framework"
-    ],
+    "description": "Sistema completo para gest\u00e3o de estoque, vendas e an\u00fancios de autope\u00e7as, com integra\u00e7\u00e3o direta com marketplaces como Mercado Livre, OLX, Magalu e Shopee.",
+    "keywords": ["laravel", "framework"],
     "authors": [
         {
             "name": "David Marques",
@@ -19,6 +16,7 @@
     ],
     "require": {
         "php": "8.4.1",
+        "filament/filament": "^5.3",
         "laravel/framework": "^12.54",
         "laravel/tinker": "^2.11"
     },
@@ -69,7 +67,8 @@
         "post-install-cmd": "./vendor/bin/captainhook install",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"

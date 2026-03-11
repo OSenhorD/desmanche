@@ -190,7 +190,7 @@ O sistema inclui:
 
 ## Documentações externas
 
-- [FilamentPHP](https://filamentphp.com/docs/5.x/introduction/overview)
+- [FilamentPHP](./docs/filament.md)
 
 ---
 
