@@ -4,13 +4,26 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Database\Factories\ProductFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
+/**
+ * @property Category $category_id
+ * @property string $sku
+ * @property string $name
+ * @property string|null $description
+ * @property numeric $price
+ * @property numeric $stock
+ * @property bool $active
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
 final class Product extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProductFactory> */
+    /** @use HasFactory<ProductFactory> */
     use HasFactory;
 
     /**
@@ -19,11 +32,13 @@ final class Product extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'categories_id',
+        'category_id',
+        'sku',
         'name',
         'description',
         'price',
         'stock',
+        'active',
     ];
 
     /**
@@ -35,7 +50,7 @@ final class Product extends Model
 
     public function category(): BelongsTo
     {
-        return $this->belongsTo(Categories::class, 'categories_id');
+        return $this->belongsTo(Category::class);
     }
 
     /**
@@ -45,6 +60,9 @@ final class Product extends Model
      */
     protected function casts(): array
     {
-        return [];
+        return [
+            'price' => 'decimal:2',
+            'active' => 'boolean',
+        ];
     }
 }

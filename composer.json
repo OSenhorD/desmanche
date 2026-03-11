@@ -1,13 +1,9 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "desmanche/desmanche",
+    "name": "davidmarques/desmanche",
     "type": "project",
-    "description": "Sistema completo para *gestão de estoque, vendas e anúncios de autopeças*, com integração direta com marketplaces como *Mercado Livre, OLX, Magalu e Shopee*.",
-    "keywords": [
-        "laravel",
-        "framework"
-    ],
-    "license": "MIT",
+    "description": "Sistema completo para gest\u00e3o de estoque, vendas e an\u00fancios de autope\u00e7as, com integra\u00e7\u00e3o direta com marketplaces como Mercado Livre, OLX, Magalu e Shopee.",
+    "keywords": ["laravel", "framework"],
     "authors": [
         {
             "name": "David Marques",
@@ -19,23 +15,21 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "laravel/framework": "^12.0",
-        "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.10.1",
-        "livewire/livewire": "^4.0.0",
-        "tallstackui/tallstackui": "^3.0.0"
+        "php": "8.4.1",
+        "filament/filament": "^5.3",
+        "laravel/framework": "^12.54",
+        "laravel/tinker": "^2.11"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.15",
+        "barryvdh/laravel-debugbar": "^4.1",
         "captainhook/captainhook-phar": "^5.28",
-        "fakerphp/faker": "^1.23",
-        "larastan/larastan": "^3.1",
-        "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.27",
-        "laravel/sail": "^1.41",
+        "fakerphp/faker": "^1.24",
+        "larastan/larastan": "^3.9",
+        "laravel/pail": "^1.2",
+        "laravel/pint": "^1.28",
+        "laravel/sail": "^1.53",
         "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.6",
+        "nunomaduro/collision": "^8.9",
         "pestphp/pest": "^4.4",
         "pestphp/pest-plugin-laravel": "^4.1"
     },
@@ -73,7 +67,8 @@
         "post-install-cmd": "./vendor/bin/captainhook install",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
