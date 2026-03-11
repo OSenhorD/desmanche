@@ -19,7 +19,7 @@ final class ProductController extends Controller
      */
     public function create(): View
     {
-        return view('admin.products.create');
+        return view('admin.product.create');
     }
 
     /**
@@ -27,7 +27,7 @@ final class ProductController extends Controller
      */
     public function edit(Product $product): View
     {
-        return view('admin.products.edit', compact('product'));
+        return view('admin.product.edit', compact('product'));
     }
 
     /**
@@ -44,7 +44,7 @@ final class ProductController extends Controller
             ]);
         }
 
-        return view('admin.products.index', compact('products'));
+        return view('admin.product.index', compact('products'));
     }
 
     /**
@@ -64,7 +64,7 @@ final class ProductController extends Controller
         }
 
         return redirect()
-            ->route('web.admin.products.index')
+            ->route('web.admin.product.index')
             ->with('success', 'Produto criado com sucesso!');
     }
 
@@ -80,7 +80,7 @@ final class ProductController extends Controller
             ]);
         }
 
-        return redirect()->route('web.admin.products.index');
+        return redirect()->route('web.admin.product.index');
     }
 
     /**
@@ -100,7 +100,7 @@ final class ProductController extends Controller
         }
 
         return redirect()
-            ->route('web.admin.products.index')
+            ->route('web.admin.product.index')
             ->with('success', 'Produto editado com sucesso!');
     }
 
@@ -116,7 +116,7 @@ final class ProductController extends Controller
         }
 
         return redirect()
-            ->route('web.admin.products.index')
+            ->route('web.admin.product.index')
             ->with('success', 'Produto deletado!');
     }
 }
