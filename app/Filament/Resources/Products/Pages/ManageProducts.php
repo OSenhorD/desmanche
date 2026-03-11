@@ -10,6 +10,7 @@ use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ManageRecords;
 use Filament\Schemas\Components\EmbeddedTable;
 use Filament\Schemas\Components\RenderHook;
+use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Schema;
 use Filament\Support\Enums\IconPosition;
@@ -42,11 +43,23 @@ final class ManageProducts extends ManageRecords
     {
         return $schema
             ->components([
-                $this->getTabsContentComponent()->contained(true),
+                $this->getTabsContentComponent(),
                 RenderHook::make(PanelsRenderHook::RESOURCE_PAGES_LIST_RECORDS_TABLE_BEFORE),
                 EmbeddedTable::make(),
                 RenderHook::make(PanelsRenderHook::RESOURCE_PAGES_LIST_RECORDS_TABLE_AFTER),
             ]);
+    }
+
+    public function getTabsContentComponent(): Tabs
+    {
+        $tabs = $this->getCachedTabs();
+
+        return Tabs::make()
+            ->key('resourceTabs')
+            ->livewireProperty('activeTab')
+            ->contained(true)
+            ->tabs($tabs)
+            ->hidden(empty($tabs));
     }
 
     protected function getHeaderActions(): array
