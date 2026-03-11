@@ -16,6 +16,8 @@ $ php artisan make:model Product -m -f -s --pest
 
 # 3º Subi a migration
 $ php artisan migrate
+# Reseta o banco
+$ php artisan migrate:fresh --seed
 
 # 4º Crie uma página simples para a tabela
 $ php artisan make:filament-resource Product --simple
