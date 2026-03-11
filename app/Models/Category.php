@@ -4,13 +4,21 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Database\Factories\CategoryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
-final class Categories extends Model
+/**
+ * @property string $name
+ * @property string|null $description
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
+final class Category extends Model
 {
-    /** @use HasFactory<\Database\Factories\CategoriesFactory> */
+    /** @use HasFactory<CategoryFactory> */
     use HasFactory;
 
     /**
@@ -18,7 +26,10 @@ final class Categories extends Model
      *
      * @var list<string>
      */
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'name',
+        'description',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -29,7 +40,7 @@ final class Categories extends Model
 
     public function products(): HasMany
     {
-        return $this->hasMany(Product::class, 'categories_id');
+        return $this->hasMany(Product::class);
     }
 
     /**

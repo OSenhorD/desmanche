@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Categories>
+ * @extends Factory<Category>
  */
-final class CategoriesFactory extends Factory
+final class CategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,7 +20,7 @@ final class CategoriesFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            'name' => $this->faker->name(),
         ];
     }
 }

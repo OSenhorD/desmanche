@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Policies;
 
-use App\Models\Categories;
+use App\Models\Category;
 use App\Models\User;
 
-final class CategoriesPolicy
+final class CategoryPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -20,7 +20,7 @@ final class CategoriesPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Categories $categories): bool
+    public function view(User $user, Category $category): bool
     {
         return false;
     }
@@ -36,7 +36,7 @@ final class CategoriesPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Categories $categories): bool
+    public function update(User $user, Category $category): bool
     {
         return false;
     }
@@ -44,7 +44,7 @@ final class CategoriesPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Categories $categories): bool
+    public function delete(User $user, Category $category): bool
     {
         return false;
     }
@@ -52,7 +52,7 @@ final class CategoriesPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Categories $categories): bool
+    public function restore(User $user, Category $category): bool
     {
         return false;
     }
@@ -60,7 +60,7 @@ final class CategoriesPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Categories $categories): bool
+    public function forceDelete(User $user, Category $category): bool
     {
         return false;
     }
