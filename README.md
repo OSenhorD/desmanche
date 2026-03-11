@@ -190,7 +190,7 @@ O sistema inclui:
 
 ## Documentações externas
 
-- [Ícones](https://fontawesome.com/icons)
+- [FilamentPHP](https://filamentphp.com/docs/5.x/introduction/overview)
 
 ---
 
