@@ -188,6 +188,12 @@ O sistema inclui:
 
 ---
 
+## Documentações externas
+
+- [Ícones](https://fontawesome.com/icons)
+
+---
+
 ## Licença
 
 Este projeto é privado e destinado ao uso interno da empresa ou clientes licenciados.
