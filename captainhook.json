@@ -84,6 +84,21 @@
                         ]
                     }
                 ]
+            },
+            {
+                "action": "npm install",
+                "options": {},
+                "conditions": [
+                    {
+                        "exec": "CaptainHook.FileChanged.Any",
+                        "args": [
+                            [
+                                "package.json",
+                                "package-lock.json"
+                            ]
+                        ]
+                    }
+                ]
             }
         ]
     }
