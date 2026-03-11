@@ -14,6 +14,9 @@ final class CategoriesSeeder extends Seeder
      */
     public function run(): void
     {
-        Categories::factory(10)->create();
+        Categories::factory()
+            ->count(10)
+            ->hasProducts(20)
+            ->create();
     }
 }
