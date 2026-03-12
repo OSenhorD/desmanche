@@ -31,6 +31,8 @@ final class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('')
             ->login()
+            ->font('Inter', GoogleFontProvider::class)
+            ->brandLogo(asset('assets/logo.png'))
             ->colors([
                 'primary' => Color::Teal,
             ])
