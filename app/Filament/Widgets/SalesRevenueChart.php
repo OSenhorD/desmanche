@@ -13,7 +13,7 @@ final class SalesRevenueChart extends ChartWidget
 
     protected static bool $isDiscovered = false;
 
-    public static function getTitle(): ?string
+    public static function getTitle(): string
     {
         return 'Vendas em Tempo Real';
     }
