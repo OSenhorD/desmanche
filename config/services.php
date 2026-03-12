@@ -37,4 +37,11 @@ return [
         ],
     ],
 
+    'marketplace' => [
+        'mercadolivre' => [
+            'app_id' => env('MARKETPLACE_MERCADOLIVRE_APP_ID'),
+            'secret' => env('MARKETPLACE_MERCADOLIVRE_SECRET'),
+            'redirect_uri' => env('MARKETPLACE_MERCADOLIVRE_REDIRECT_URI'),
+        ],
+    ],
 ];
