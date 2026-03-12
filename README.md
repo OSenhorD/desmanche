@@ -70,13 +70,13 @@ Principais características:
 * PHP 8+
 * Composer
 * Framework Laravel
-* MySQL
+* MySQL 8+
 * REST API
 * Integração com APIs externas
 
 ### Frontend
 
-* Node.js
+* Node.js 24+
 * NPM
 * Vite
 * JavaScript / TypeScript
@@ -98,7 +98,6 @@ Principais características:
 * PHP 8.2 ou superior
 * Composer
 * Extensões PHP:
-
   * OpenSSL
   * PDO
   * Mbstring
@@ -107,15 +106,6 @@ Principais características:
   * Ctype
   * JSON
   * BCMath
-
-### Frontend
-
-* Node.js 18 ou superior
-* NPM
-
-### Banco de Dados
-
-* MySQL 8+
 
 ---
 
