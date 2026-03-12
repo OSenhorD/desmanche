@@ -181,6 +181,7 @@ O sistema inclui:
 ## Documentações externas
 
 - [FilamentPHP](./docs/filament.md)
+- [Heroicons](https://blade-ui-kit.com/blade-icons?set=1#search)
 
 ---
 
