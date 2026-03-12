@@ -19,6 +19,7 @@ use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 final class AdminPanelProvider extends PanelProvider
@@ -33,6 +34,18 @@ final class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Teal,
             ])
+            ->renderHook(
+                'panels::head.end',
+                fn () => Blade::render('<style>
+                    .fi-main-ctn { max-width: 100% !important; }
+                    .fi-page-content { max-width: 100% !important; width: 100% !important; }
+                    .fi-main { max-width: 100% !important; }
+                    .fi-body { max-width: 100% !important; }
+                    .fi-sidebar { width: 16rem !important; }
+                    .fi-sidebar-nav { padding: 0 8px !important; margin-top: 32px !important; }
+                    .fi-nav-item { margin: 4px 0 !important; padding-left: 12px !important; }
+                </style>')
+            )
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
