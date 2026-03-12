@@ -11,7 +11,6 @@ final class SalesRevenueChart extends ChartWidget
 {
     protected ?string $maxHeight = '300px';
 
-    // Adicione esta linha para esconder da dashboard padrão
     protected static bool $isDiscovered = false;
 
     public static function getTitle(): ?string
