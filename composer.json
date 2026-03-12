@@ -30,7 +30,6 @@
         "larastan/larastan": "^3.9",
         "laravel/pail": "^1.2",
         "laravel/pint": "^1.28",
-        "laravel/sail": "^1.53",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.9",
         "pestphp/pest": "^4.4",
@@ -50,12 +49,15 @@
     },
     "scripts": {
         "setup": [
+            "docker compose up -d",
             "composer install",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate",
             "@php artisan migrate --force --seed",
             "npm install",
-            "npm run build"
+            "npm run build",
+            "@php artisan make:filament-user",
+            "@php artisan serve"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
