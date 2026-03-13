@@ -70,9 +70,11 @@ Principais características:
 * PHP 8+
 * Composer
 * Framework Laravel
-* MySQL 8+
+* MySQL 8+ via Docker
+* FilamentPHP 5.3
 * REST API
 * Integração com APIs externas
+* Captainhook para conformidade de ambiente
 
 ### Frontend
 
@@ -91,53 +93,18 @@ Principais características:
 
 ---
 
-## Requisitos do Ambiente
-
-### Backend
-
-* PHP 8.2 ou superior
-* Composer
-* Extensões PHP:
-  * OpenSSL
-  * PDO
-  * Mbstring
-  * Tokenizer
-  * XML
-  * Ctype
-  * JSON
-  * BCMath
-
----
-
 ## Instalação
 
-### 1. Clonar o repositório
-
 ```bash
+# 1. Clonar o repositório
 $ git clone https://github.com/OSenhorD/desmanche.git
 $ cd desmanche
-```
 
----
-
-### 2. Instalar dependências PHP
-
-```bash
+# 2. Instalar dependências PHP
 $ composer run-script setup
-```
 
----
-
-### 8. Iniciar servidor
-
-```bash
-php artisan serve
-```
-
-A aplicação estará disponível em:
-
-```
-http://localhost:8000
+# A aplicação estará disponível em:
+# http://localhost:8000
 ```
 
 ---
@@ -181,7 +148,7 @@ O sistema inclui:
 ## Documentações externas
 
 - [FilamentPHP](./docs/filament.md)
-- [Heroicons](https://blade-ui-kit.com/blade-icons?set=1#search)
+- [Blade Icons](https://blade-ui-kit.com/blade-icons?set=1#search)
 
 ---
 
