@@ -17,22 +17,22 @@
         <div class="w-full flex flex-col justify-center flex-wrap gap-x-2 gap-y-3 text-xs">
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-md" style="background:#3b82f6"></div>
-                <span class="text-white">Motor (32%)</span>
+                <span>Motor (32%)</span>
             </div>
 
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-md" style="background:#22c55e"></div>
-                <span class="text-white">Suspensao (22%)</span>
+                <span>Suspensao (22%)</span>
             </div>
 
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-md" style="background:#f97316"></div>
-                <span class="text-white">Freios (18%)</span>
+                <span>Freios (18%)</span>
             </div>
 
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-md" style="background:#a855f7"></div>
-                <span class="text-white">Eletrica (15%)</span>
+                <span>Eletrica (15%)</span>
             </div>
         </div>
     </div>
