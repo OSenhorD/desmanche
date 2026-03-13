@@ -18,7 +18,7 @@
             </x-filament::badge>
         </div>
 
-        <a href="https://staff-tribe-pichunter-humans.trycloudflare.com/api/v1/integrations/mercadolivre/login"
+        <a href="https://launched-gloves-sprint-formula.trycloudflare.com/api/v1/integrations/mercadolivre/login"
             target="_blank"
             class="group relative w-full block overflow-hidden rounded-xl border border-[#d4be00] bg-[#ffe600] px-4 py-3.25 text-[13.5px] font-[650] tracking-tight text-black shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45),0_1px_2px_rgba(0,0,0,0.06)] transition-all hover:bg-[#ffea47] active:translate-y-px active:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.35)]">
             <span class="relative z-10 flex items-center justify-center gap-2">

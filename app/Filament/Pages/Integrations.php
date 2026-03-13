@@ -12,14 +12,15 @@ use Livewire\Attributes\On;
 
 final class Integrations extends Page
 {
+    public $token;
+
+    public $response;
+
     protected static ?string $title = 'Integrações';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::InformationCircle;
 
     protected string $view = 'filament.pages.integrations';
-    
-    public $token;
-    public $response;
 
     #[On('ml-users-me')]
     public function usersMe()

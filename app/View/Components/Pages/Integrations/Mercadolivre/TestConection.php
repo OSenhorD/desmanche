@@ -7,7 +7,7 @@ namespace App\View\Components\Pages\Integrations\Mercadolivre;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class TestConection extends Component
+final class TestConection extends Component
 {
     /**
      * Create a new component instance.

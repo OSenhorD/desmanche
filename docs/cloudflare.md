@@ -15,9 +15,12 @@ $ cloudflared --version
 ```sh
 $ cloudflared tunnel --url http://localhost:8000
 
+# URL do ML
+# https://developers.mercadolivre.com.br/devcenter
+
 # Copie a URL gerada e uso no Mercado Livre
-# Ex: https://staff-tribe-pichunter-humans.trycloudflare.com/api/v1/integrations/mercadolivre/callback
-# Ex: https://staff-tribe-pichunter-humans.trycloudflare.com/api/v1/integrations/mercadolivre/webhook
+# Ex: https://launched-gloves-sprint-formula.trycloudflare.com/api/v1/integrations/mercadolivre/callback
+# Ex: https://launched-gloves-sprint-formula.trycloudflare.com/api/v1/integrations/mercadolivre/webhook
 ```
 
 ### Credenciais
@@ -29,7 +32,7 @@ $ cloudflared tunnel --url http://localhost:8000
 
 ```sh
 # Acessa a página de login
-# https://staff-tribe-pichunter-humans.trycloudflare.com/api/v1/integrations/mercadolivre/login
+# https://launched-gloves-sprint-formula.trycloudflare.com/api/v1/integrations/mercadolivre/login
 
 $ curl -H 'Authorization: Bearer <seu-token-aqui>' \
   https://api.mercadolibre.com/users/me
