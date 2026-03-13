@@ -1,16 +1,4 @@
-<div class="space-y-3">
-    <div class="flex justify-between items-center">
-        <div class="space-y-1">
-            <div class="text-base font-semibold text-white">
-                Vendas por Categoria
-            </div>
-
-            <div class="text-xs text-gray-500">
-                Este mês
-            </div>
-        </div>
-    </div>
-
+<x-ui.card title="Vendas por Categoria" subtitle="Este mês">
     <div class="flex flex-col items-center justify-between flex-1 h-full space-y-3">
         <svg class="w-50 h-50" viewBox="0 0 200 200">
             <circle cx="100" cy="100" r="70" fill="none" stroke="#3b82f6" stroke-width="24"
@@ -48,4 +36,4 @@
             </div>
         </div>
     </div>
-</div>
+</x-ui.card>

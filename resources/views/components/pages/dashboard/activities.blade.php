@@ -1,15 +1,5 @@
-<div class="p-4 space-y-2 shadow rounded-xl bg-gray-900">
-    <div class="space-y-1 pb-2 border-b-2 border-b-[#334155]">
-        <div class="text-base font-semibold text-white">
-            Feed de Atividades
-        </div>
-
-        <div class="text-xs text-gray-500">
-            Últimas ações do sistema
-        </div>
-    </div>
-
-    <div class="space-y-2">
+<x-ui.card title="Feed de Atividades" subtitle="Últimas ações do sistema">
+    <x-filament::card>
         @foreach($items as $item)
             <div class="flex gap-x-3 p-2 rounded-md">
                 <div class="flex justify-center items-center">
@@ -25,21 +15,22 @@
                             @break
                         @default
                             <x-fas-sync class="h-3 w-3 text-blue-800" />
+                            @break
                     @endswitch
                 </div>
 
                 <div class="flex-1">
-                    <span class="text-sm truncate text-white">
+                    <span class="text-sm truncate">
                         {{ $item[1] }}
                     </span>
                 </div>
 
-                <div class="w-10 flex justify-end">
-                    <span class="px-2 py-1 text-xs text-right rounded-md whitespace-nowrap text-gray-500 bg-gray-800">
+                <div class="flex justify-end">
+                    <x-filament::badge color="gray">
                         {{ $item[2] }}
-                    </span>
+                    </x-filament::badge>
                 </div>
             </div>
         @endforeach
-    </div>
-</div>
+    </x-filament::card>
+</x-ui.card>
