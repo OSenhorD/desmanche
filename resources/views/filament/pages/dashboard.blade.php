@@ -14,6 +14,15 @@
 
     <div class="grid grid-cols-12 gap-8">
         <div class="col-span-8">
+            <x-dashboard.chart-sales />
+        </div>
+
+        <div class="col-span-8">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-8">
             <x-dashboard.marketplaces-status :items="$marketplacesStatus" />
         </div>
 

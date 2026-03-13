@@ -1,4 +1,5 @@
 @props([
+    'class' => '',
     'icon' => null,
     'type' => 'success',
 ])
@@ -17,6 +18,7 @@
     {{
         $attributes->class([
             'inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium',
+            $class,
             $classes
         ])
     }}
