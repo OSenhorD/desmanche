@@ -16,10 +16,8 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Pages\SimplePage;
 use Filament\Schemas\Schema;
-use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Validation\ValidationException;
-use Livewire\Features\SupportRedirects\Redirector;
 
 final class Login extends SimplePage implements HasForms
 {
@@ -37,10 +35,11 @@ final class Login extends SimplePage implements HasForms
             redirect()->intended(Filament::getUrl());
         }
 
+        // @phpstan-ignore-next-line class.notFound
         $this->form->fill();
     }
 
-    public function authenticate(): RedirectResponse|Redirector|null
+    public function authenticate(): ?RedirectResponse
     {
         try {
             $this->rateLimit(5);
@@ -60,6 +59,7 @@ final class Login extends SimplePage implements HasForms
             return null;
         }
 
+        // @phpstan-ignore-next-line class.notFound
         $data = $this->form->getState();
 
         if (! Filament::auth()->attempt([
@@ -99,17 +99,17 @@ final class Login extends SimplePage implements HasForms
             ->statePath('data');
     }
 
-    public function getTitle(): string|Htmlable
+    public function getTitle(): string
     {
         return 'Login';
     }
 
-    public function getHeading(): string|Htmlable
+    public function getHeading(): string
     {
         return 'Bem-vindo de volta';
     }
 
-    public function getSubheading(): string|Htmlable|null
+    public function getSubheading(): string
     {
         return 'Acesse sua conta para gerenciar seu desmanche';
     }
