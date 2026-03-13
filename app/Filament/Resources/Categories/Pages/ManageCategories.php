@@ -10,6 +10,8 @@ use Filament\Resources\Pages\ManageRecords;
 
 final class ManageCategories extends ManageRecords
 {
+    protected static ?string $title = 'Categorias';
+
     protected static string $resource = CategoryResource::class;
 
     protected function getHeaderActions(): array

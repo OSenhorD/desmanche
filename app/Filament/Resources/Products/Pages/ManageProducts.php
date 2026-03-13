@@ -19,6 +19,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 final class ManageProducts extends ManageRecords
 {
+    protected static ?string $title = 'Produtos';
+
     protected static string $resource = ProductResource::class;
 
     public function getTabs(): array
