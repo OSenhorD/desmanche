@@ -16,6 +16,8 @@ final class Dashboard extends Page
 
     public array $activities = [];
 
+    public array $marketplacesStatus = [];
+
     protected string $view = 'filament.pages.dashboard';
 
     protected static ?string $title = 'Dashboard';
@@ -29,6 +31,7 @@ final class Dashboard extends Page
         $this->stats = $this->getStats();
         $this->alerts = $this->getAlerts();
         $this->activities = $this->getActivities();
+        $this->marketplacesStatus = $this->getMarketplacesStatus();
     }
 
     public function getStats(): array
@@ -88,6 +91,16 @@ final class Dashboard extends Page
             ['error', 'Falha na publicacao: Alternador Corsa (OLX)', '1h atras'],
             ['success', 'Bomba D\'agua Palio 2015 publicada em 2 canais', '1h 20min atras'],
             ['sync', 'Sincronizacao com Mercado Livre concluida (284 itens)', '2h atras'],
+        ];
+    }
+
+    public function getMarketplacesStatus(): array
+    {
+        return [
+            ['ML', 'Mercado Livre', 'bg-cyan-500', 284, 12, 3, true],
+            ['SH', 'Shopee', 'bg-yellow-500', 156, 4, 0, true],
+            ['OX', 'OLX', 'bg-purple-500', 89, 0, 7, false],
+            ['MG', 'Magalu', 'bg-blue-500', 125, 4, 2, false],
         ];
     }
 }
