@@ -1,7 +1,3 @@
-@props([
-    'items' => [],
-])
-
 <div class="p-4 rounded-xl space-y-4 shadow bg-gray-900">
     <div class="flex justify-between items-center">
         <div class="space-y-1">

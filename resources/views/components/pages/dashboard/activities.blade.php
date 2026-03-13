@@ -1,7 +1,3 @@
-@props([
-    'items' => [],
-])
-
 <div class="p-4 space-y-2 shadow rounded-xl bg-gray-900">
     <div class="space-y-1 pb-2 border-b-2 border-b-[#334155]">
         <div class="text-base font-semibold text-white">
