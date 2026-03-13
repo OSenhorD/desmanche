@@ -98,7 +98,7 @@ final class Dashboard extends Page
     {
         return [
             ['ML', 'Mercado Livre', 'bg-cyan-500', 284, 12, 3, true],
-            ['SH', 'Shopee', 'bg-yellow-500', 156, 4, 0, true],
+            ['SH', 'Shopee', 'bg-yellow-500', 156, 4, 0, false],
             ['OX', 'OLX', 'bg-purple-500', 89, 0, 7, false],
             ['MG', 'Magalu', 'bg-blue-500', 125, 4, 2, false],
         ];
