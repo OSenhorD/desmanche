@@ -18,6 +18,7 @@ use Filament\Pages\SimplePage;
 use Filament\Schemas\Schema;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Validation\ValidationException;
+use Livewire\Features\SupportRedirects\Redirector;
 
 final class Login extends SimplePage implements HasForms
 {
@@ -39,7 +40,8 @@ final class Login extends SimplePage implements HasForms
         $this->form->fill();
     }
 
-    public function authenticate(): ?RedirectResponse
+    // @phpstan-ignore-next-line return.unusedType
+    public function authenticate(): RedirectResponse|Redirector|null
     {
         try {
             $this->rateLimit(5);
@@ -73,7 +75,7 @@ final class Login extends SimplePage implements HasForms
 
         session()->regenerate();
 
-        return redirect()->intended(Filament::getUrl());
+        return redirect()->intended('/dashboard');
     }
 
     public function form(Schema $schema): Schema
