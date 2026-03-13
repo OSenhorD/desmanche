@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Pages;
 
 use BackedEnum;
 use Filament\Pages\Page;
 use Filament\Support\Icons\Heroicon;
 
-class Integrations extends Page
+final class Integrations extends Page
 {
     protected static ?string $title = 'Integrações';
 
