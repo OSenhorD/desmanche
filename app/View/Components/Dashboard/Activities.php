@@ -7,7 +7,7 @@ namespace App\View\Components\Dashboard;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-final class StatCard extends Component
+final class Activities extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +22,6 @@ final class StatCard extends Component
      */
     public function render(): View
     {
-        return view('components.dashboard.stat-card');
+        return view('components.dashboard.activities');
     }
 }
