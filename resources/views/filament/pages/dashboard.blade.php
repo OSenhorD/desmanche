@@ -17,7 +17,8 @@
             <x-dashboard.chart-sales />
         </div>
 
-        <div class="col-span-8">
+        <div class="col-span-4">
+            <x-dashboard.chart-pie-categories />
         </div>
     </div>
 

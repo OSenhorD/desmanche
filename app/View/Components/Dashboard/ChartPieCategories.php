@@ -7,7 +7,7 @@ namespace App\View\Components\Dashboard;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-final class ChartSales extends Component
+final class ChartPieCategories extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +22,6 @@ final class ChartSales extends Component
      */
     public function render(): View
     {
-        return view('components.dashboard.chart-sales');
+        return view('components.dashboard.chart-pie-categories');
     }
 }
