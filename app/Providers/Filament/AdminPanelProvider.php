@@ -28,8 +28,8 @@ final class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('')
-            ->login(Login::class)
             ->viteTheme('resources/css/filament/admin/theme.css')
+            ->login(Login::class)
             ->font('Inter', GoogleFontProvider::class)
             ->brandLogo(asset('assets/logo.png'))
             ->colors([
