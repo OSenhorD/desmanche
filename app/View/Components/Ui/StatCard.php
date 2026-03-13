@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\View\Components\Dashboard;
+namespace App\View\Components\Ui;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-final class MarketplacesStatus extends Component
+final class StatCard extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +22,6 @@ final class MarketplacesStatus extends Component
      */
     public function render(): View
     {
-        return view('components.dashboard.marketplaces-status');
+        return view('components.ui.stat-card');
     }
 }

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\View\Components\Dashboard;
+namespace App\View\Components\Pages\Dashboard;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-final class Activities extends Component
+final class AlertStock extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +22,6 @@ final class Activities extends Component
      */
     public function render(): View
     {
-        return view('components.dashboard.activities');
+        return view('components.pages.dashboard.alert-stock');
     }
 }

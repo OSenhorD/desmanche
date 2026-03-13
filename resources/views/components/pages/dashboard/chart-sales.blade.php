@@ -10,13 +10,13 @@
             </div>
         </div>
 
-        <x-badge
+        <x-ui.badge
             class="animate-pulse"
             type="success"
             icon="far-dot-circle"
             >
             Ao Vivo
-        </x-badge>
+        </x-ui.badge>
     </div>
 
     @livewire(\App\Filament\Widgets\SalesRevenueChart::class)

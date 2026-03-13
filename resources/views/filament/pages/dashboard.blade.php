@@ -1,7 +1,7 @@
 <x-filament-panels::page>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         @foreach($stats as $stat)
-            <x-dashboard.stat-card
+            <x-ui.stat-card
                 :title="$stat['title']"
                 :value="$stat['value']"
                 :growValue="$stat['growValue']"
@@ -14,23 +14,23 @@
 
     <div class="grid grid-cols-12 gap-8">
         <div class="col-span-8">
-            <x-dashboard.chart-sales />
+            <x-pages.dashboard.chart-sales />
         </div>
 
         <div class="col-span-4">
-            <x-dashboard.chart-pie-categories />
+            <x-pages.dashboard.chart-pie-categories />
         </div>
     </div>
 
     <div class="grid grid-cols-12 gap-8">
         <div class="col-span-8">
-            <x-dashboard.marketplaces-status :items="$marketplacesStatus" />
+            <x-pages.dashboard.marketplaces-status :items="$marketplacesStatus" />
         </div>
 
         <div class="col-span-4">
-            <x-dashboard.alert-stock :items="$alerts" />
+            <x-pages.dashboard.alert-stock :items="$alerts" />
         </div>
     </div>
 
-    <x-dashboard.activities :items="$activities" />
+    <x-pages.dashboard.activities :items="$activities" />
 </x-filament-panels::page>

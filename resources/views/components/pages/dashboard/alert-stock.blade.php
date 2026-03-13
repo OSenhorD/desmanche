@@ -8,12 +8,12 @@
             Alertas de Estoque
         </span>
 
-        <x-badge
+        <x-ui.badge
             type="error"
             icon="heroicon-s-bell-alert"
             >
             {{ count($items) }} itens
-        </x-badge>
+        </x-ui.badge>
     </div>
 
     @foreach($items as $item)

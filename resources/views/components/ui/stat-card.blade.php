@@ -22,8 +22,5 @@
         </p>
     </div>
 
-    <x-dynamic-component
-        :component="$iconName"
-        class="h-6 w-6 {{ $iconColor }}"
-    />
+    <x-dynamic-component :component="$iconName" class="h-6 w-6 {{ $iconColor }}" />
 </div>

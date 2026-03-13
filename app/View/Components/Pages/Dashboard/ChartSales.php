@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\View\Components\Dashboard;
+namespace App\View\Components\Pages\Dashboard;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -22,6 +22,6 @@ final class ChartSales extends Component
      */
     public function render(): View
     {
-        return view('components.dashboard.chart-sales');
+        return view('components.pages.dashboard.chart-sales');
     }
 }

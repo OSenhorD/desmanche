@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\View\Components;
+namespace App\View\Components\Pages\Dashboard;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-final class Badge extends Component
+final class ChartPieCategories extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +22,6 @@ final class Badge extends Component
      */
     public function render(): View
     {
-        return view('components.badge');
+        return view('components.pages.dashboard.chart-pie-categories');
     }
 }

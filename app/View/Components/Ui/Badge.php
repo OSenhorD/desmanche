@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\View\Components\Dashboard;
+namespace App\View\Components\Ui;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-final class StatCard extends Component
+final class Badge extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +22,6 @@ final class StatCard extends Component
      */
     public function render(): View
     {
-        return view('components.dashboard.stat-card');
+        return view('components.ui.badge');
     }
 }
