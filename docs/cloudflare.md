@@ -13,11 +13,11 @@ $ cloudflared --version
 ### Criar túnel
 
 ```sh
-$ cloudflared tunnel --url http://localhost
+$ cloudflared tunnel --url http://localhost:8000
 
 # Copie a URL gerada e uso no Mercado Livre
-# Ex: https://assets-snow-faqs-platform.trycloudflare.com/api/v1/integrations/mercadolivre/callback
-# Ex: https://assets-snow-faqs-platform.trycloudflare.com/api/v1/integrations/mercadolivre/webhook
+# Ex: https://staff-tribe-pichunter-humans.trycloudflare.com/api/v1/integrations/mercadolivre/callback
+# Ex: https://staff-tribe-pichunter-humans.trycloudflare.com/api/v1/integrations/mercadolivre/webhook
 ```
 
 ### Credenciais
@@ -29,7 +29,7 @@ $ cloudflared tunnel --url http://localhost
 
 ```sh
 # Acessa a página de login
-# https://assets-snow-faqs-platform.trycloudflare.com/api/v1/integrations/mercadolivre/login
+# https://staff-tribe-pichunter-humans.trycloudflare.com/api/v1/integrations/mercadolivre/login
 
 $ curl -H 'Authorization: Bearer <seu-token-aqui>' \
   https://api.mercadolibre.com/users/me

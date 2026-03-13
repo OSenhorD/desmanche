@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Providers\Filament;
 
 use App\Filament\Pages\Auth\Login;
-use Filament\FontProviders\GoogleFontProvider;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -30,7 +29,6 @@ final class AdminPanelProvider extends PanelProvider
             ->path('')
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->login(Login::class)
-            ->font('Inter', GoogleFontProvider::class)
             ->brandLogo(asset('assets/logo.png'))
             ->colors([
                 'primary' => Color::Teal,

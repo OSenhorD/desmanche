@@ -1,16 +1,4 @@
-<div class="space-y-3">
-    <div class="flex justify-between items-center">
-        <div class="space-y-1">
-            <div class="text-base font-semibold text-white">
-                Vendas por Categoria
-            </div>
-
-            <div class="text-xs text-gray-500">
-                Este mês
-            </div>
-        </div>
-    </div>
-
+<x-ui.card title="Vendas por Categoria" subtitle="Este mês">
     <div class="flex flex-col items-center justify-between flex-1 h-full space-y-3">
         <svg class="w-50 h-50" viewBox="0 0 200 200">
             <circle cx="100" cy="100" r="70" fill="none" stroke="#3b82f6" stroke-width="24"
@@ -29,23 +17,23 @@
         <div class="w-full flex flex-col justify-center flex-wrap gap-x-2 gap-y-3 text-xs">
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-md" style="background:#3b82f6"></div>
-                <span class="text-white">Motor (32%)</span>
+                <span>Motor (32%)</span>
             </div>
 
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-md" style="background:#22c55e"></div>
-                <span class="text-white">Suspensao (22%)</span>
+                <span>Suspensao (22%)</span>
             </div>
 
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-md" style="background:#f97316"></div>
-                <span class="text-white">Freios (18%)</span>
+                <span>Freios (18%)</span>
             </div>
 
             <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-md" style="background:#a855f7"></div>
-                <span class="text-white">Eletrica (15%)</span>
+                <span>Eletrica (15%)</span>
             </div>
         </div>
     </div>
-</div>
+</x-ui.card>
