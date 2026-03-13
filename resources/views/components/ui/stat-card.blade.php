@@ -1,12 +1,3 @@
-@props([
-    'title',
-    'value',
-    'growValue' => '...',
-    'growColor' => 'text-gray-500',
-    'iconName' => 'heroicon-o-chart-bar',
-    'iconColor' => 'text-yellow-500',
-])
-
 <div class="flex justify-between items-center p-4 shadow rounded-xl bg-gray-900">
     <div>
         <p class="text-sm text-gray-300">

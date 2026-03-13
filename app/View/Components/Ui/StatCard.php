@@ -12,8 +12,14 @@ final class StatCard extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
-    {
+    public function __construct(
+        public string $title = '',
+        public string $value = '',
+        public string $growValue = '...',
+        public string $growColor = 'text-gray-500',
+        public string $iconName = 'heroicon-o-chart-bar',
+        public string $iconColor = 'text-yellow-500',
+    ) {
         //
     }
 
