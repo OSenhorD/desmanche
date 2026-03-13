@@ -18,7 +18,7 @@ $ cloudflared tunnel --url http://localhost:8000
 # URL do ML
 # https://developers.mercadolivre.com.br/devcenter
 
-# Copie a URL gerada e uso no Mercado Livre
+# Copie a URL gerada e use no Mercado Livre
 # Ex: https://launched-gloves-sprint-formula.trycloudflare.com/api/v1/integrations/mercadolivre/callback
 # Ex: https://launched-gloves-sprint-formula.trycloudflare.com/api/v1/integrations/mercadolivre/webhook
 ```
@@ -32,6 +32,7 @@ $ cloudflared tunnel --url http://localhost:8000
 
 ```sh
 # Acessa a página de login
+# Ou coloque o link no blade 
 # https://launched-gloves-sprint-formula.trycloudflare.com/api/v1/integrations/mercadolivre/login
 
 $ curl -H 'Authorization: Bearer <seu-token-aqui>' \

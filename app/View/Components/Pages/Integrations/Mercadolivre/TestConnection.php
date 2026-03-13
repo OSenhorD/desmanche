@@ -7,13 +7,14 @@ namespace App\View\Components\Pages\Integrations\Mercadolivre;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-final class Conection extends Component
+final class TestConnection extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
-    {
+    public function __construct(
+        public $response = null,
+    ) {
         //
     }
 
@@ -22,6 +23,6 @@ final class Conection extends Component
      */
     public function render(): View
     {
-        return view('components.pages.integrations.mercadolivre.conection');
+        return view('components.pages.integrations.mercadolivre.test-connection');
     }
 }
