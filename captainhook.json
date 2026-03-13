@@ -99,6 +99,11 @@
                         ]
                     }
                 ]
+            },
+            {
+                "action": "npm run build",
+                "options": {},
+                "conditions": []
             }
         ]
     }
